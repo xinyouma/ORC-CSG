@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Softwares &mdash; ORC-CSG Documentation 0.1 documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+    <link rel="shortcut icon" href="_static/favicon.ico"/>
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="_static/jquery.js"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/sphinx_highlight.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="User Guide" href="full_user_guide.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            ORC-CSG Documentation
+              <img src="_static/orc-csg-logo-2.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="new_user.html">New User Quickstart</a></li>
+<li class="toctree-l1"><a class="reference internal" href="hpc_in_the_cloud.html">HPC in the Cloud</a></li>
+<li class="toctree-l1"><a class="reference internal" href="resources.html">ORC-CSG Resources</a></li>
+<li class="toctree-l1"><a class="reference internal" href="full_user_guide.html">User Guide</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Softwares</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#python-3-environments">Python 3 Environments</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#chemistry-softwares">Chemistry Softwares</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">ORC-CSG Documentation</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Softwares</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/software.md.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="softwares">
+<h1>Softwares<a class="headerlink" href="#softwares" title="Permalink to this heading"></a></h1>
+<section id="python-3-environments">
+<h2>Python 3 Environments<a class="headerlink" href="#python-3-environments" title="Permalink to this heading"></a></h2>
+<p><strong>ORC-CSG</strong> provides 4 different sets of python 3 environments for users. Users may choose different python development environment dependent on their workflow.</p>
+<ul>
+<li><ol class="arabic simple">
+<li><p><strong>native python</strong> (3.9.15, 3.11.0, 3.12.0)</p></li>
+</ol>
+<p>In the native python environments, a list of essential scientific analysis and machine learning packages are provided.</p>
+</li>
+<li><ol class="arabic simple" start="2">
+<li><p><strong>anaconda 3</strong> (2022.10)</p></li>
+</ol>
+<p>Anaconda 3 provides a standard size of packages that are ready to use for uses to perform data analysis and/or python code developments.</p>
+</li>
+<li><ol class="arabic simple" start="3">
+<li><p><strong>miniconda 3</strong> (23.1.0)</p></li>
+</ol>
+<p>Miniconda 3 contains the smallest size of pre-installed packages. Users can easily build their own environments using Miniconda.</p>
+</li>
+<li><ol class="arabic simple" start="4">
+<li><p><strong>mamba</strong> (1.3.1)</p></li>
+</ol>
+<p>Mamba has the advantages to the package dependency faster than conda. Therefore, several software packages, such as openmm and deepmd-kit, are installed using the mamba version.</p>
+</li>
+</ul>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Packages</p></th>
+<th class="head"><p>Anaconda 3 (2022.10)</p></th>
+<th class="head"><p>Native Python (3.11.0/3.12.0)</p></th>
+<th class="head"><p>Mamba (1.3.1)</p></th>
+<th class="head"><p>Miniconda 3 (23.1.0)</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>ipython</p></td>
+<td><p>Y</p></td>
+<td><p>Y</p></td>
+<td><p>Y</p></td>
+<td><p>N</p></td>
+</tr>
+<tr class="row-odd"><td><p>numpy</p></td>
+<td><p>Y</p></td>
+<td><p>Y</p></td>
+<td><p>Y</p></td>
+<td><p>N</p></td>
+</tr>
+<tr class="row-even"><td><p>pandas</p></td>
+<td><p>Y</p></td>
+<td><p>Y</p></td>
+<td><p>Y</p></td>
+<td><p>N</p></td>
+</tr>
+<tr class="row-odd"><td><p>matplotlib</p></td>
+<td><p>Y</p></td>
+<td><p>Y</p></td>
+<td><p>Y</p></td>
+<td><p>N</p></td>
+</tr>
+<tr class="row-even"><td><p>dask</p></td>
+<td><p>Y</p></td>
+<td><p>Y</p></td>
+<td><p>N</p></td>
+<td><p>N</p></td>
+</tr>
+<tr class="row-odd"><td><p>jupyter</p></td>
+<td><p>Y</p></td>
+<td><p>Y</p></td>
+<td><p>Y</p></td>
+<td><p>N</p></td>
+</tr>
+<tr class="row-even"><td><p>scikit-learn</p></td>
+<td><p>Y</p></td>
+<td><p>Y</p></td>
+<td><p>Y</p></td>
+<td><p>N</p></td>
+</tr>
+<tr class="row-odd"><td><p>pytorch</p></td>
+<td><p>N</p></td>
+<td><p>Y</p></td>
+<td><p>N</p></td>
+<td><p>N</p></td>
+</tr>
+<tr class="row-even"><td><p>scipy</p></td>
+<td><p>Y</p></td>
+<td><p>Y</p></td>
+<td><p>N</p></td>
+<td><p>N</p></td>
+</tr>
+<tr class="row-odd"><td><p>tensorflow</p></td>
+<td><p>N</p></td>
+<td><p>Y</p></td>
+<td><p>N</p></td>
+<td><p>N</p></td>
+</tr>
+<tr class="row-even"><td><p>jupyterlab</p></td>
+<td><p>Y</p></td>
+<td><p>N</p></td>
+<td><p>Y</p></td>
+<td><p>N</p></td>
+</tr>
+<tr class="row-odd"><td><p>numba</p></td>
+<td><p>Y</p></td>
+<td><p>N</p></td>
+<td><p>N</p></td>
+<td><p>N</p></td>
+</tr>
+<tr class="row-even"><td><p>spyder</p></td>
+<td><p>Y</p></td>
+<td><p>N</p></td>
+<td><p>N</p></td>
+<td><p>N</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="chemistry-softwares">
+<h2>Chemistry Softwares<a class="headerlink" href="#chemistry-softwares" title="Permalink to this heading"></a></h2>
+<p>Most of the softwares available in the <strong>ORC-CSG</strong> system are built for the theoretical/computational projects in the <a class="reference external" href="https://www.ornl.gov/group/chemical-separations">Chemical Separations Group</a>. <strong>In the ORC-CSG system, the performance of these chemistry softwares are fully optimized to achieve their best performances.</strong> These include but are not limited to:</p>
+<ul class="simple">
+<li><ol class="arabic simple">
+<li><p><strong>Quantum chemistry calculations of molecular properties</strong>  (Gaussian, Molpro, ORCA, CP2K, OpenMolcas)</p></li>
+</ol>
+</li>
+<li><ol class="arabic simple" start="2">
+<li><p><strong>Excited state quantum chemistry calculations</strong> (Gaussian, Molpro, ORCA, CP2K, OpenMolcas)</p></li>
+</ol>
+</li>
+<li><ol class="arabic simple" start="3">
+<li><p><strong>Molecular dynamics simulations</strong> (LAMMPS, GROMACS, CP2K)</p></li>
+</ol>
+</li>
+<li><ol class="arabic simple" start="4">
+<li><p><strong>Advanced molecular dynamics simulations for free energy calculations</strong> (LAMMPS, GROMACS, CP2K)</p></li>
+</ol>
+</li>
+<li><ol class="arabic simple" start="5">
+<li><p><strong>Advanced molecular dynamics simulations using quantum mechanics</strong> (Gaussian, CP2K)</p></li>
+</ol>
+</li>
+<li><ol class="arabic simple" start="6">
+<li><p><strong>Solid state material calculations</strong> (CP2K)</p></li>
+</ol>
+</li>
+</ul>
+<p>Details of available software can be found in the table below:</p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Software</p></th>
+<th class="head"><p>Version</p></th>
+<th class="head"><p>Compiler</p></th>
+<th class="head"><p></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>CP2K</p></td>
+<td><p>8.2</p></td>
+<td><p>GCC-10.2.0</p></td>
+<td><p><img alt="CP2K" src="https://www.cp2k.org/_media/wiki:logo.png" /></p></td>
+</tr>
+<tr class="row-odd"><td><p></p></td>
+<td><p>2022.2</p></td>
+<td><p>GCC-10.2.0</p></td>
+<td><p><img alt="CP2K" src="https://www.cp2k.org/_media/wiki:logo.png" /></p></td>
+</tr>
+<tr class="row-even"><td><p>Gaussian</p></td>
+<td><p>g16-rev-C.02</p></td>
+<td><p></p></td>
+<td><p><img alt="Gaussian" src="https://gaussian.com/wp-content/uploads/2016/07/logo_image14.bmp" /></p></td>
+</tr>
+<tr class="row-odd"><td><p>GROMACS</p></td>
+<td><p>2022.3</p></td>
+<td><p>GCC-10.2.0</p></td>
+<td><p><img alt="Gromacs" src="https://www.gromacs.org/_static/gmx_logo_blue.png" /></p></td>
+</tr>
+<tr class="row-even"><td><p>LAMMPS</p></td>
+<td><p>23Jun2022_up1</p></td>
+<td><p>GCC-10.2.0</p></td>
+<td><p><img alt="Lammps" src="https://www.lammps.org/movies/logo.gif" /></p></td>
+</tr>
+<tr class="row-odd"><td><p>Molpro</p></td>
+<td><p>2012.1.57</p></td>
+<td><p>GCC-10.2.0</p></td>
+<td><p><img alt="Molpro" src="https://www.molpro.net/resources/logo/molpro_logo_aa_75.gif" /></p></td>
+</tr>
+<tr class="row-even"><td><p>OpenMM</p></td>
+<td><p>8.0</p></td>
+<td><p></p></td>
+<td><p><img alt="OpenMM" src="https://simtk.org/logos/openmm?dummy_value=973060835" /></p></td>
+</tr>
+<tr class="row-odd"><td><p>OpenMolcas</p></td>
+<td><p>22.10</p></td>
+<td><p>GCC-10.2.0</p></td>
+<td><p><img alt="OpenMolcas" src="https://gitlab.com/uploads/-/system/project/avatar/3536517/logo_open_flat.png?width=64" /></p></td>
+</tr>
+<tr class="row-even"><td><p>ORCA</p></td>
+<td><p>5.0.3</p></td>
+<td><p></p></td>
+<td><p><img alt="ORCA" src="https://www.orcasoftware.de/tutorials_orca/_images/ORCA_logo.png" /></p></td>
+</tr>
+<tr class="row-odd"><td><p>Plumed</p></td>
+<td><p>2.6.2</p></td>
+<td><p>GCC-10.2.0</p></td>
+<td><p><img alt="Plumed" src="https://www.plumed.org//pigeon.png" /></p></td>
+</tr>
+<tr class="row-even"><td><p>VMD</p></td>
+<td><p>1.9.4a55</p></td>
+<td><p></p></td>
+<td><p></p></td>
+</tr>
+</tbody>
+</table>
+<p><img alt="ORC-CSG" src="_images/orc-csg-banner-2.png" /></p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="full_user_guide.html" class="btn btn-neutral float-left" title="User Guide" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023, Xinyou Ma.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

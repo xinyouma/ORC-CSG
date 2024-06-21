@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>New User Quickstart &mdash; ORC-CSG Documentation 0.1 documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+    <link rel="shortcut icon" href="_static/favicon.ico"/>
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="_static/jquery.js"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/sphinx_highlight.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="HPC in the Cloud" href="hpc_in_the_cloud.html" />
+    <link rel="prev" title="Chemical Separation Group @ ORNL Research Cloud" href="index.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            ORC-CSG Documentation
+              <img src="_static/orc-csg-logo-2.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">New User Quickstart</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#introduction">1. Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#apply-for-access">2. Apply for access</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#connect-to-orc-csg">3. Connect to ORC-CSG</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#home-working-and-scratch-directories">4. Home, Working, and Scratch Directories</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#transfer-files-and-data-to-orc-csg">5. Transfer Files and Data to ORC-CSG</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#the-batch-queue">6. the Batch Queue</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="hpc_in_the_cloud.html">HPC in the Cloud</a></li>
+<li class="toctree-l1"><a class="reference internal" href="resources.html">ORC-CSG Resources</a></li>
+<li class="toctree-l1"><a class="reference internal" href="full_user_guide.html">User Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="software.html">Softwares</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">ORC-CSG Documentation</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">New User Quickstart</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/new_user.md.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="new-user-quickstart">
+<h1>New User Quickstart<a class="headerlink" href="#new-user-quickstart" title="Permalink to this heading"></a></h1>
+<section id="introduction">
+<h2>1. Introduction<a class="headerlink" href="#introduction" title="Permalink to this heading"></a></h2>
+<p>This document briefly summarize the information a new user may need to quickly get started on the computer nodes on <strong>ORC-CSG</strong>. More details can be found in the full version.</p>
+</section>
+<section id="apply-for-access">
+<h2>2. Apply for access<a class="headerlink" href="#apply-for-access" title="Permalink to this heading"></a></h2>
+<p>Currently, <strong>ORC-CSG</strong> are open to a small community of research personels. To use the computational and data storage system in <strong>ORC-CSG</strong>, please get the approval from the group leader of the Chemical Science Group (CSG) first, then contact the <a class="reference external" href="mailto:max2&#37;&#52;&#48;ornl&#46;gov">administrator</a>.</p>
+</section>
+<section id="connect-to-orc-csg">
+<h2>3. Connect to ORC-CSG<a class="headerlink" href="#connect-to-orc-csg" title="Permalink to this heading"></a></h2>
+<p><strong>ORC-CSG</strong> can be accessed within the ORNL internal network via ssh:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>% ssh &lt;user_id&gt;@orc-csg-login.ornl.gov
+</pre></div>
+</div>
+<p>For users outside the ONRL network, we encourage access through the <a class="reference external" href="https://ornl.servicenowservices.com/now/nav/ui/classic/params/target/kb_view.do%3Fsysparm_article%3DKB0100127">ORNL login servers</a>.</p>
+</section>
+<section id="home-working-and-scratch-directories">
+<h2>4. Home, Working, and Scratch Directories<a class="headerlink" href="#home-working-and-scratch-directories" title="Permalink to this heading"></a></h2>
+<p>Each user can use the file space in their <code class="docutils literal notranslate"><span class="pre">$HOME</span></code>, <code class="docutils literal notranslate"><span class="pre">$WORKDIR</span></code>, and <code class="docutils literal notranslate"><span class="pre">$SCRATCH</span></code> directories. These environment variables are pre-setup upon user’s login to the system.</p>
+<ul class="simple">
+<li><p>NOTE: Each of the <code class="docutils literal notranslate"><span class="pre">$HOME</span></code>, <code class="docutils literal notranslate"><span class="pre">$WORKDIR</span></code>, and <code class="docutils literal notranslate"><span class="pre">$SCRATCH</span></code> file systems are shared among all users. The administrator has NOT enforced a hard quota to each user. But a “good neighbor” policy is expected. The admin would send out notification once the filesystems are loaded.</p></li>
+</ul>
+</section>
+<section id="transfer-files-and-data-to-orc-csg">
+<h2>5. Transfer Files and Data to ORC-CSG<a class="headerlink" href="#transfer-files-and-data-to-orc-csg" title="Permalink to this heading"></a></h2>
+<p>Users can transfer files and data to <strong>ORC-CSG</strong> via</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>% scp a_local_file &lt;user_id&gt;@orc-csg-login.ornl.gov:&lt;target_dir&gt;
+</pre></div>
+</div>
+<p>For users outside the ORNL network, we encourage file transfer through the <a class="reference external" href="https://ornl.servicenowservices.com/now/nav/ui/classic/params/target/kb_view.do%3Fsysparm_article%3DKB0100127">ORNL login servers</a>, for example, using SCP through SSH tunnel.</p>
+</section>
+<section id="the-batch-queue">
+<h2>6. the Batch Queue<a class="headerlink" href="#the-batch-queue" title="Permalink to this heading"></a></h2>
+<p>The Slurm Workload Manager is the job queuing system or workload management system for <strong>ORC-CSG</strong>. Users can check the current node status by</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>% sinfo
+</pre></div>
+</div>
+<p>and check the current queue status by</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>% squeue
+</pre></div>
+</div>
+<p>To submit a batch job, use the following command:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>% sbatch [option] &lt;submission-script&gt;
+</pre></div>
+</div>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Priority</p></th>
+<th class="head"><p>Queue Name</p></th>
+<th class="head"><p>Max Wall Clock Time</p></th>
+<th class="head"><p>Max Cores Per Job</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>High</p></td>
+<td><p>Standard</p></td>
+<td><p>14 Days</p></td>
+<td><p>376</p></td>
+<td><p>Standard queue</p></td>
+</tr>
+<tr class="row-odd"><td><p>Low</p></td>
+<td><p>Background</p></td>
+<td><p>14 Days</p></td>
+<td><p>376</p></td>
+<td><p>Killable queue</p></td>
+</tr>
+</tbody>
+</table>
+<p><img alt="ORC-CSG" src="_images/orc-csg-banner-2.png" /></p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="index.html" class="btn btn-neutral float-left" title="Chemical Separation Group @ ORNL Research Cloud" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="hpc_in_the_cloud.html" class="btn btn-neutral float-right" title="HPC in the Cloud" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023, Xinyou Ma.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

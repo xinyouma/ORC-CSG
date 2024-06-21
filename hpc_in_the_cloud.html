@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HPC in the Cloud &mdash; ORC-CSG Documentation 0.1 documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+    <link rel="shortcut icon" href="_static/favicon.ico"/>
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="_static/jquery.js"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/sphinx_highlight.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="ORC-CSG Resources" href="resources.html" />
+    <link rel="prev" title="New User Quickstart" href="new_user.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            ORC-CSG Documentation
+              <img src="_static/orc-csg-logo-2.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="new_user.html">New User Quickstart</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">HPC in the Cloud</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#the-background">The Background</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#wait-what-is-cloud-computing"><em>“Wait, what is cloud computing?”</em></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#the-concept-hpc-in-the-cloud">The Concept “HPC in the Cloud”</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#why-do-we-need-cloud-computing-for-hpc">Why do we need Cloud Computing for HPC?</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#an-axillary-resource-to-the-traditional-hpc-resources">1. An axillary resource to the traditional HPC resources</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#a-ready-to-use-hpc-resource">2. A ready-to-use HPC resource</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#intereactive-hpc">3. Intereactive HPC!</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#implementations">Implementations</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#step-1-one-user-scheme">Step 1. One-user scheme</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#step-2-multiple-users">Step 2. Multiple users</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#step-3-parallel-file-system">Step 3. Parallel File System</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#step-4-job-scheduler">Step 4. Job Scheduler</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="resources.html">ORC-CSG Resources</a></li>
+<li class="toctree-l1"><a class="reference internal" href="full_user_guide.html">User Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="software.html">Softwares</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">ORC-CSG Documentation</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">HPC in the Cloud</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/hpc_in_the_cloud.md.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="hpc-in-the-cloud">
+<h1>HPC in the Cloud<a class="headerlink" href="#hpc-in-the-cloud" title="Permalink to this heading"></a></h1>
+<section id="the-background">
+<h2>The Background<a class="headerlink" href="#the-background" title="Permalink to this heading"></a></h2>
+<p>The differences are almost diminished between a state-of-the-art computing unit in a HPC facility and a top-end computer hosted in a cloud computing platform. In the past, HPC facilities in research institutes have almost the absolute supermacy for high performance computing (HPC) tasks. Now, however, as increasing numbers of web-based services now adopt artificiail intelligence (AI) algorithms, cloud computing companies are also providing HPC services. The functionalities of the web-based services, as well as users’ expectations for fast responses, are craving for more and more powerful computers in the cloud’s backend. (Two examples are the large-language models (LLM) and AI art generators.) Moreover, ever since graphic processor units (GPU) become a powerful accelerator for HPC tasks, both HPC facilities and cloud computing companies armed their computer clusters with similar GPU cards.</p>
+<p><img alt="A illustration of Cloud Computing" src="_images/cloud_computing.png" /></p>
+</section>
+<section id="wait-what-is-cloud-computing">
+<h2><em>“Wait, what is cloud computing?”</em><a class="headerlink" href="#wait-what-is-cloud-computing" title="Permalink to this heading"></a></h2>
+<p>An over-easy definition of “cloud computing” from the user perspective of view is that: “I don’t know where my computer is, but I can log in there and finish my job in that computer”. And an over-simplyfied definition from the vendor perspective of view is: “instead of buying an expensive computer, you can check out virtual computers from us; if you need to keep something (small) running for a long period of time, you can check out our mini-computer, too.”</p>
+<p>In the 2000s, when the Amazon Web Service (AWS) lift from the ground, cloud computing was meant to minimize the cost of hosting web-based services from maintening private web servers. The computational needs for these web-based services often spikes upon large-volume user activities, but the computational cost of a single run is not much.</p>
+</section>
+<section id="the-concept-hpc-in-the-cloud">
+<h2>The Concept “HPC in the Cloud”<a class="headerlink" href="#the-concept-hpc-in-the-cloud" title="Permalink to this heading"></a></h2>
+<p>The concept “<strong>HPC in the Cloud</strong>” is not new. In fact, cloud computing has been a versatile solution to high performance computing tasks for reserchers with different needs.</p>
+<p>The central idea of “HPC in the Cloud” is to</p>
+<ul class="simple">
+<li><ol class="arabic simple">
+<li><p>utilize computational resources in a public/private cloud</p></li>
+</ol>
+</li>
+<li><ol class="arabic simple" start="2">
+<li><p>avoid cost on hardware maintenance</p></li>
+</ol>
+</li>
+<li><ol class="arabic simple" start="3">
+<li><p>allocate a dedicated and perpetual computational partition</p></li>
+</ol>
+</li>
+<li><ol class="arabic simple" start="4">
+<li><p>easily expand/reduce add-on computational partitions whenever needed</p></li>
+</ol>
+</li>
+<li><ol class="arabic simple" start="5">
+<li><p>adjust the software environments for a specific community of users</p></li>
+</ol>
+</li>
+<li><ol class="arabic simple" start="6">
+<li><p>standardize and archive any work flow.</p></li>
+</ol>
+</li>
+</ul>
+<p>In brief, this idea aims to build a HPC software environment and a HPC work flow without building a HPC facility.</p>
+<p>Two unique features also make this architecture stand out from the traditional HPC environment are:</p>
+<ul class="simple">
+<li><p>flexible scale of HPC resource allocation</p></li>
+<li><p>personalized/customized HPC environment for specific user(s)</p></li>
+</ul>
+</section>
+<section id="why-do-we-need-cloud-computing-for-hpc">
+<h2>Why do we need Cloud Computing for HPC?<a class="headerlink" href="#why-do-we-need-cloud-computing-for-hpc" title="Permalink to this heading"></a></h2>
+<section id="an-axillary-resource-to-the-traditional-hpc-resources">
+<h3>1. An axillary resource to the traditional HPC resources<a class="headerlink" href="#an-axillary-resource-to-the-traditional-hpc-resources" title="Permalink to this heading"></a></h3>
+<p>The “HPC in the Cloud” concept and implementation are not revolution ideas against the traditional HPC resources. Instead, HPC facilities are still the most rubust option that provides stable and reliable computational resources.</p>
+</section>
+<section id="a-ready-to-use-hpc-resource">
+<h3>2. A ready-to-use HPC resource<a class="headerlink" href="#a-ready-to-use-hpc-resource" title="Permalink to this heading"></a></h3>
+<p>HPC facilities often aims to maximize the loading at all time, therefore, there is always a waiting time before users can actually utilize the HPC resources. An HPC user can be very frustrated if:</p>
+<ul class="simple">
+<li><ol class="arabic simple">
+<li><p><strong>the HPC facility is under unusual high-volume usage.</strong> For example, extremely long waiting time in the queue</p></li>
+</ol>
+</li>
+<li><ol class="arabic simple" start="2">
+<li><p><strong>the HPC jobs are unable to reconcile with the HPC policy.</strong> For example, HPC jobs that has unexpected long computation * cycles which exceeds the maximum computation time allowance per job.</p></li>
+</ol>
+</li>
+<li><ol class="arabic simple" start="3">
+<li><p><strong>the HPC software needs to be tested in various architecures and scales.</strong> For example, compatability issues in the acceleration cards.</p></li>
+</ol>
+</li>
+</ul>
+</section>
+<section id="intereactive-hpc">
+<h3>3. Intereactive HPC!<a class="headerlink" href="#intereactive-hpc" title="Permalink to this heading"></a></h3>
+<p>An increasing number of services now require HPC workload for human-accepatable responses. Two well-known examples are 1) the LLM-based chatbots, such as ChatGPT by OpenAI and Llama 2 by Meta, and 2) AI text-to-image generators such as Midjourney and DALL-E 2. Without HPC resources, the workflow can be in a very slow process that eventually fails users’ expectations. Therefore, it is very crucial to deploy the real-time demonstrative workflow to HPC resources with interactive functionalities.</p>
+<p>Another scitific need for intereactive HPC is on-the-fly rendering of the simulation data to provide images/videos which are updated in real time. This often requires a powerful data processing unit (DPU) and graphic processing unit (GPU).</p>
+</section>
+</section>
+<section id="implementations">
+<h2>Implementations<a class="headerlink" href="#implementations" title="Permalink to this heading"></a></h2>
+<p>There can be 3 Level steps to implement an “HPC in the Cloud” architecture:</p>
+<ul class="simple">
+<li><ol class="arabic simple">
+<li><p>Running HPC programs on cloud computing resources</p></li>
+</ol>
+</li>
+<li><ol class="arabic simple" start="2">
+<li><p>Support multi-user and multiple HPC jobs</p></li>
+</ol>
+</li>
+<li><ol class="arabic simple" start="3">
+<li><p>Cloud computing environment</p></li>
+</ol>
+</li>
+</ul>
+<section id="step-1-one-user-scheme">
+<h3>Step 1. One-user scheme<a class="headerlink" href="#step-1-one-user-scheme" title="Permalink to this heading"></a></h3>
+<p>The simplest and most straightforward implementation of this idea is to use the cloud computers as individual remote computers. In this scenario, there is only one user, who is also the administrator or the super-user in the project. The computational jobs will be assigned to different virtual nodes depending on the user’s schedule.</p>
+<p>Pro:</p>
+<ul class="simple">
+<li><ol class="arabic simple">
+<li><p>easy to get started and easy to run</p></li>
+</ol>
+</li>
+<li><ol class="arabic simple" start="2">
+<li><p>the user has the full freedom to choose the computational resource</p></li>
+</ol>
+</li>
+<li><ol class="arabic simple" start="3">
+<li><p>no need to worry about data storage and communication between nodes</p></li>
+</ol>
+</li>
+</ul>
+<p>Con:</p>
+<ul class="simple">
+<li><ol class="arabic simple">
+<li><p>the user needs to manually track the job status</p></li>
+</ol>
+</li>
+<li><ol class="arabic simple" start="2">
+<li><p>jobs are limited to one job per node.</p></li>
+</ol>
+</li>
+</ul>
+<p><img alt="architecture1" src="_images/HPC_in_the_Cloud_architecture_1.png" /></p>
+</section>
+<section id="step-2-multiple-users">
+<h3>Step 2. Multiple users<a class="headerlink" href="#step-2-multiple-users" title="Permalink to this heading"></a></h3>
+<p>The next step is to expand the service to allow additional users to join the project. This can create a number of issues. First, if all users would access to the computer nodes using the same identity, i.e., the super-user, the system can have higher security risks. Second, it is very easy to lose track of users’ activities. Third, the users must verbally create a series of protocol for data storage and CPU time priorities. Thus, the ‘one-user’ scheme will not work well in this scenario.</p>
+<p><img alt="architecture1" src="_images/HPC_in_the_Cloud_architecture_2.png" /></p>
+<p>An easy solution is to 1) create individual profiles and file spaces for each user, and 2) by adding a virtual node as a “gateway” or a “login node”, forbid user’s direct access to the “compute” nodes. Therefore, the users need to firstly log in to the gateway node with their own identity, then proceed to the compute node.</p>
+<p><img alt="architecture1" src="_images/HPC_in_the_Cloud_architecture_3.png" /></p>
+<p>Pro:</p>
+<ul class="simple">
+<li><ol class="arabic simple">
+<li><p>this provides a temporary solution to the “multi-user multi-node” scenario</p></li>
+</ol>
+</li>
+</ul>
+<p>Con:</p>
+<ul class="simple">
+<li><ol class="arabic simple">
+<li><p>the users need to manually track the job status</p></li>
+</ol>
+</li>
+<li><ol class="arabic simple" start="2">
+<li><p>unless carefully managed, the software and hpc environments can be easily asynchronized</p></li>
+</ol>
+</li>
+<li><ol class="arabic simple" start="3">
+<li><p>the softwares need to be repeatedly installed on each single node</p></li>
+</ol>
+</li>
+</ul>
+</section>
+<section id="step-3-parallel-file-system">
+<h3>Step 3. Parallel File System<a class="headerlink" href="#step-3-parallel-file-system" title="Permalink to this heading"></a></h3>
+<p>Using a unified file system for data storage across the gateway and compute nodes, rather than using separated file systems, simplifies the data management and data transfer within the system. In cloud computing, the super user can subscribe a storage space (for example an NFS space), and mount this file system to each node. In this way, users can minimize the inter-node data transfer when working across multiple nodes.</p>
+<p>Another advantage of using a parallel file system, compared to seprated file systems, is efficient software management. With the parallel file system scheme, users can use the same version of software, which can achieve an HPC-style of software management.</p>
+<p><img alt="architecture1" src="_images/HPC_in_the_Cloud_architecture_4.png" /></p>
+</section>
+<section id="step-4-job-scheduler">
+<h3>Step 4. Job Scheduler<a class="headerlink" href="#step-4-job-scheduler" title="Permalink to this heading"></a></h3>
+<p>To maximize the compute nodes utilizations witout protocols, a HPC job scheduler, such as PBS and SLURM, must be implemented. Using the previous “gateway” architecture, the job scheduler architecture would stop the users’ direct access to the compute nodes, and replace it with a limited-time access with job reservations.</p>
+<p>In this scheme, a queueing system will be implemented to block users’ job from rushing to all computers, instead, prioritized jobs will be executed before regular jobs.</p>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="new_user.html" class="btn btn-neutral float-left" title="New User Quickstart" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="resources.html" class="btn btn-neutral float-right" title="ORC-CSG Resources" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023, Xinyou Ma.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

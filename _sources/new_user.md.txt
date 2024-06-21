@@ -1,0 +1,53 @@
+# New User Quickstart
+
+## 1. Introduction
+
+This document briefly summarize the information a new user may need to quickly get started on the computer nodes on **ORC-CSG**. More details can be found in the full version.
+
+## 2. Apply for access
+
+Currently, **ORC-CSG** are open to a small community of research personels. To use the computational and data storage system in **ORC-CSG**, please get the approval from the group leader of the Chemical Science Group (CSG) first, then contact the [administrator](mailto:max2@ornl.gov). 
+
+## 3. Connect to ORC-CSG
+
+**ORC-CSG** can be accessed within the ORNL internal network via ssh:
+
+	% ssh <user_id>@orc-csg-login.ornl.gov
+
+For users outside the ONRL network, we encourage access through the [ORNL login servers](https://ornl.servicenowservices.com/now/nav/ui/classic/params/target/kb_view.do%3Fsysparm_article%3DKB0100127).
+	
+## 4. Home, Working, and Scratch Directories
+
+Each user can use the file space in their `$HOME`, `$WORKDIR`, and `$SCRATCH` directories. These environment variables are pre-setup upon user's login to the system.
+ 
+* NOTE: Each of the `$HOME`, `$WORKDIR`, and `$SCRATCH` file systems are shared among all users. The administrator has NOT enforced a hard quota to each user. But a "good neighbor" policy is expected. The admin would send out notification once the filesystems are loaded.
+
+## 5. Transfer Files and Data to ORC-CSG 
+
+Users can transfer files and data to **ORC-CSG** via
+
+	% scp a_local_file <user_id>@orc-csg-login.ornl.gov:<target_dir>
+
+For users outside the ORNL network, we encourage file transfer through the [ORNL login servers](https://ornl.servicenowservices.com/now/nav/ui/classic/params/target/kb_view.do%3Fsysparm_article%3DKB0100127), for example, using SCP through SSH tunnel.
+
+
+## 6. the Batch Queue
+The Slurm Workload Manager is the job queuing system or workload management system for **ORC-CSG**. Users can check the current node status by 
+
+	% sinfo
+	
+and check the current queue status by
+
+	% squeue
+	 
+To submit a batch job, use the following command:
+
+	% sbatch [option] <submission-script>
+
+
+| Priority | Queue Name | Max Wall Clock Time | Max Cores Per Job | Description    |
+|----------|------------|---------------------|-------------------|----------------|
+| High     | Standard   | 14 Days             | 376               | Standard queue |
+| Low      | Background | 14 Days             | 376               | Killable queue |
+
+![ORC-CSG](images/orc-csg-banner-2.png)

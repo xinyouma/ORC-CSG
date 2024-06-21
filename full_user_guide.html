@@ -1,0 +1,749 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>User Guide &mdash; ORC-CSG Documentation 0.1 documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+    <link rel="shortcut icon" href="_static/favicon.ico"/>
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="_static/jquery.js"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/sphinx_highlight.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Softwares" href="software.html" />
+    <link rel="prev" title="ORC-CSG Resources" href="resources.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            ORC-CSG Documentation
+              <img src="_static/orc-csg-logo-2.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="new_user.html">New User Quickstart</a></li>
+<li class="toctree-l1"><a class="reference internal" href="hpc_in_the_cloud.html">HPC in the Cloud</a></li>
+<li class="toctree-l1"><a class="reference internal" href="resources.html">ORC-CSG Resources</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">User Guide</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#system-overview">1. System Overview</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#document-overview-and-assumptions">1.1 Document overview and Assumptions</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#citation-information">2. Citation Information</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#system-configuration">3. System Configuration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#data-storage-resources">4. Data Storage Resources</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#orc-csg-access-policies">5. ORC-CSG Access Policies</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#network-traffic-policy">5.1 Network traffic Policy</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#file-system-policy">5.2 File System Policy</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#user-environment">6. User environment</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#modules">6.1 Modules</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#compilers">6.2 Compilers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#parallel-computing-libraries">6.3 Parallel Computing Libraries</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#softwares">6.4 Softwares</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#slurm-job-scheduler">7. Slurm Job Scheduler</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#slurm">7.1 Slurm</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#quality-of-service-qos">7.2 Quality of Service (QoS)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#queue-and-queueing-policy">7.3 Queue and Queueing Policy</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#batch-scripts">7.4 Batch scripts</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#example-1-gaussian-16-with-30-cores">7.4.1 Example 1: Gaussian 16 (with 30 cores)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#example-2-gaussian-16-with-constrained-memory-size">7.4.2 Example 2: Gaussian 16 with constrained memory size</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#example-3-molpro-2021-1">7.4.3 Example 3: Molpro 2021.1</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#example-4-orca-5-0-3">7.4.4 Example 4: ORCA 5.0.3</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#example-cp2k-8-2-0">7.4.5 Example: CP2K 8.2.0</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="software.html">Softwares</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">ORC-CSG Documentation</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">User Guide</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/full_user_guide.md.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="user-guide">
+<h1>User Guide<a class="headerlink" href="#user-guide" title="Permalink to this heading"></a></h1>
+<section id="system-overview">
+<h2>1. System Overview<a class="headerlink" href="#system-overview" title="Permalink to this heading"></a></h2>
+<section id="document-overview-and-assumptions">
+<h3>1.1 Document overview and Assumptions<a class="headerlink" href="#document-overview-and-assumptions" title="Permalink to this heading"></a></h3>
+<p>The <strong>ORC-CSG</strong> system is an active HPC cluster of the <a class="reference external" href="https://www.ornl.gov/group/chemical-separations">Chemical Separation Group</a> running on the <a class="reference external" href="https://cades.ornl.gov/service-suite/cades-cloud/">ORNL research Cloud</a> computing resource.</p>
+<p>This document provides an overview and introduction to the use of the <strong>ORC-CSG</strong> system.</p>
+<p>It would be the most efficient for the current or future users to have these proficient knowledge in prior to using this system:</p>
+<ul class="simple">
+<li><p>Experience of using UNIX operating system</p></li>
+<li><p>Bash script language</p></li>
+<li><p>A remote compute system which supports network access</p></li>
+<li><p>Programming knowledge and some experience with libraries</p></li>
+</ul>
+</section>
+</section>
+<section id="citation-information">
+<h2>2. Citation Information<a class="headerlink" href="#citation-information" title="Permalink to this heading"></a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">**</span><span class="n">Note</span><span class="p">:</span><span class="o">**</span>
+<span class="n">The</span> <span class="n">following</span> <span class="n">acknowledgment</span> <span class="n">should</span> <span class="n">be</span> <span class="n">included</span> <span class="ow">in</span> <span class="n">publications</span> <span class="ow">and</span> <span class="n">presentations</span> <span class="n">that</span> <span class="n">contain</span> <span class="n">work</span> <span class="n">performed</span> <span class="n">using</span> <span class="n">CADES</span> <span class="n">resources</span><span class="p">:</span> <span class="n">This</span> <span class="n">research</span> <span class="n">used</span> <span class="n">birthright</span> <span class="n">cloud</span> <span class="n">resources</span> <span class="n">of</span> <span class="n">the</span> <span class="n">Compute</span> <span class="ow">and</span> <span class="n">Data</span> <span class="n">Environment</span> <span class="k">for</span> <span class="n">Science</span> <span class="p">(</span><span class="n">CADES</span><span class="p">)</span> <span class="n">at</span> <span class="n">the</span> <span class="n">Oak</span> <span class="n">Ridge</span> <span class="n">National</span> <span class="n">Laboratory</span><span class="p">,</span> <span class="n">which</span> <span class="ow">is</span> <span class="n">supported</span> <span class="n">by</span> <span class="n">the</span> <span class="n">Office</span> <span class="n">of</span> <span class="n">Science</span> <span class="n">of</span> <span class="n">the</span> <span class="n">U</span><span class="o">.</span><span class="n">S</span><span class="o">.</span> <span class="n">Department</span> <span class="n">of</span> <span class="n">Energy</span> <span class="n">under</span> <span class="n">Contract</span> <span class="n">No</span><span class="o">.</span> <span class="n">DE</span><span class="o">-</span><span class="n">AC05</span><span class="o">-</span><span class="mi">00</span><span class="n">OR22725</span><span class="o">.</span>
+
+</pre></div>
+</div>
+</section>
+<section id="system-configuration">
+<h2>3. System Configuration<a class="headerlink" href="#system-configuration" title="Permalink to this heading"></a></h2>
+<p><strong>ORC-CSG</strong> is built on</p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p></p></th>
+<th class="head"><p>Login</p></th>
+<th class="head"><p>Standard</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Total Nodes</p></td>
+<td><p>1</p></td>
+<td><p>3</p></td>
+</tr>
+<tr class="row-odd"><td><p>Processor</p></td>
+<td><p>AMD EPYC 7702</p></td>
+<td><p>AMD EPYC 7702</p></td>
+</tr>
+<tr class="row-even"><td><p>Proc Speed</p></td>
+<td><p>2.0 GHz</p></td>
+<td><p>2.0 GHz</p></td>
+</tr>
+<tr class="row-odd"><td><p>Cores/Node</p></td>
+<td><p>8</p></td>
+<td><p>120 or 128</p></td>
+</tr>
+<tr class="row-even"><td><p>Total Cores</p></td>
+<td><p>8</p></td>
+<td><p>376</p></td>
+</tr>
+<tr class="row-odd"><td><p>Memory/Node</p></td>
+<td><p>16 GB</p></td>
+<td><p>960 GB</p></td>
+</tr>
+<tr class="row-even"><td><p>Accelerator</p></td>
+<td><p>None</p></td>
+<td><p>None</p></td>
+</tr>
+<tr class="row-odd"><td><p>Storage on Node</p></td>
+<td><p>None</p></td>
+<td><p>None</p></td>
+</tr>
+<tr class="row-even"><td><p>Operating System</p></td>
+<td><p>CentOS 8</p></td>
+<td><p>CentOS 8</p></td>
+</tr>
+</tbody>
+</table>
+<p><img alt="" src="_images/orc-csg-system-design.png" /></p>
+</section>
+<section id="data-storage-resources">
+<h2>4. Data Storage Resources<a class="headerlink" href="#data-storage-resources" title="Permalink to this heading"></a></h2>
+<p>Three file systems are implemented in <strong>ORC-CSG</strong>:</p>
+<ul class="simple">
+<li><ol class="arabic simple">
+<li><p>an NFS partition of 950 GB mounted in the <code class="docutils literal notranslate"><span class="pre">/home</span></code> directory</p></li>
+</ol>
+</li>
+<li><ol class="arabic simple" start="2">
+<li><p>an NFS partition of 950 GB mounted in the <code class="docutils literal notranslate"><span class="pre">/nfs/work</span></code> directory</p></li>
+</ol>
+</li>
+<li><ol class="arabic simple" start="3">
+<li><p>an CephFS partition of 4.0 TB mounted in the <code class="docutils literal notranslate"><span class="pre">/cephfs/scratch</span></code> directory</p></li>
+</ol>
+</li>
+</ul>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Path</p></th>
+<th class="head"><p>Total Size</p></th>
+<th class="head"><p>File System</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>/home</p></td>
+<td><p>950 GB</p></td>
+<td><p>NFS</p></td>
+</tr>
+<tr class="row-odd"><td><p>/nfs/work</p></td>
+<td><p>950 GB</p></td>
+<td><p>NFS</p></td>
+</tr>
+<tr class="row-even"><td><p>/cephfs/scratch</p></td>
+<td><p>4 TB</p></td>
+<td><p>CephFS</p></td>
+</tr>
+</tbody>
+</table>
+<p>For each user, these file space can be accessed using the environment variables <code class="docutils literal notranslate"><span class="pre">$HOME</span></code>, <code class="docutils literal notranslate"><span class="pre">$WORKDIR</span></code>, and <code class="docutils literal notranslate"><span class="pre">$SCRATCH</span></code>.</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">/home</span></code> and the <code class="docutils literal notranslate"><span class="pre">/nfs/work</span></code> directories using the NFS, are considered to be more stable than the CephFS. The only difference between users’ <code class="docutils literal notranslate"><span class="pre">$HOME</span></code> and <code class="docutils literal notranslate"><span class="pre">$WORKDIR</span></code> directories is that <code class="docutils literal notranslate"><span class="pre">$WORKDIR</span></code> can be accessed by other users by default. The CephFS is designated to I/O intensitive (frequently read and write data) jobs, especially for computations which need to offload the temporary data storage from memories to hard drive.</p>
+<p>When user log in to the <strong>ORC-CSG</strong> system, the usage status of the three file systems are shown as follows:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>	 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+	 Mounted on       Size Avail Use%
+	 /home            950G  639G  33%
+	 /nfs/work        950G  715G  25%
+	 /cephfs/scratch  4.0T  3.1T  22%
+	 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+</pre></div>
+</div>
+</section>
+<section id="orc-csg-access-policies">
+<h2>5. ORC-CSG Access Policies<a class="headerlink" href="#orc-csg-access-policies" title="Permalink to this heading"></a></h2>
+<section id="network-traffic-policy">
+<h3>5.1 Network traffic Policy<a class="headerlink" href="#network-traffic-policy" title="Permalink to this heading"></a></h3>
+<p>Users are permitted to have unlimited time per session in the login node. However, users’s netwrok traffic activities should be stricktly for research purposes.</p>
+</section>
+<section id="file-system-policy">
+<h3>5.2 File System Policy<a class="headerlink" href="#file-system-policy" title="Permalink to this heading"></a></h3>
+<p>Currently, the <strong>ORC-CSG</strong> system does not enforce a quota for users’ usage in their <code class="docutils literal notranslate"><span class="pre">$HOME</span></code>, <code class="docutils literal notranslate"><span class="pre">$WORKDIR</span></code>, or <code class="docutils literal notranslate"><span class="pre">$SCRATCH</span></code> directories. However, a “good neighbor” policy is expected. The admin would send out notification once the filesystems are loaded.</p>
+</section>
+</section>
+<section id="user-environment">
+<h2>6. User environment<a class="headerlink" href="#user-environment" title="Permalink to this heading"></a></h2>
+<section id="modules">
+<h3>6.1 Modules<a class="headerlink" href="#modules" title="Permalink to this heading"></a></h3>
+<p>Environmental modules is a modern convenient way to set the proper (versions of) compilers, libraries, and softwares. A number of software modules are installed in <strong>ORC-CSG</strong> for users to load the correct set of environmental variables.</p>
+<p>To check the list of module files available in <strong>ORC-CSG</strong>, simply do:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">%</span> <span class="n">module</span> <span class="n">avail</span>
+</pre></div>
+</div>
+<p>or</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">%</span> <span class="n">ml</span> <span class="n">av</span>
+</pre></div>
+</div>
+<p>Here is an example of the current list of modules.</p>
+<p><img alt="" src="_images/module_load.png" /></p>
+<p>The command to load a module is:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">%</span> <span class="n">module</span> <span class="n">load</span> <span class="p">[</span><span class="n">module</span> <span class="n">name</span><span class="p">]</span>
+</pre></div>
+</div>
+<p>For example, loading the gcc-10.2.0 compiler:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">%</span> <span class="n">module</span> <span class="n">load</span> <span class="n">compiler</span><span class="o">/</span><span class="n">gcc</span><span class="o">/</span><span class="mf">10.2.0</span>
+</pre></div>
+</div>
+<p>For complete information of using the environmental modules, see the <a class="reference external" href="https://modules.readthedocs.io/en/v5.1.1/module.html">Module User Guide</a>.</p>
+</section>
+<section id="compilers">
+<h3>6.2 Compilers<a class="headerlink" href="#compilers" title="Permalink to this heading"></a></h3>
+<p>The dedicated nodes in the <strong>ORC-CSG</strong> system use the AMD EPYC 7702 CPU, which uses AMD’s ‘Zen 2 Microarchitecture’. The ‘ready-to-use’ compilers in the <strong>ORC-CSG</strong> system maximize their compatabilities as well as their HPC performance for the Zen-2 architecture. For this architecture, the widely-used CPU compilers (which are also available in <strong>ORC-CSG</strong>) are</p>
+<ul class="simple">
+<li><ol class="arabic simple">
+<li><p>the GNU compiler collection (GCC)</p></li>
+</ol>
+</li>
+<li><ol class="arabic simple" start="2">
+<li><p>the AMD Optimizing C/C++ and Fortran Compilers (AOCC)</p></li>
+</ol>
+</li>
+<li><ol class="arabic simple" start="3">
+<li><p>the Intel oneAPI toolkits</p></li>
+</ol>
+</li>
+</ul>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Compiler</p></th>
+<th class="head"><p>version</p></th>
+<th class="head"><p>Note</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>GCC</p></td>
+<td><p>8.5.0</p></td>
+<td><p>native</p></td>
+</tr>
+<tr class="row-odd"><td><p></p></td>
+<td><p>9.5.0</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p></p></td>
+<td><p>10.2.0</p></td>
+<td><p>recommended</p></td>
+</tr>
+<tr class="row-odd"><td><p></p></td>
+<td><p>11.2.0</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p></p></td>
+<td><p>12.2.0</p></td>
+<td><p>recommended</p></td>
+</tr>
+<tr class="row-odd"><td><p>AOCC</p></td>
+<td><p>3.0.0</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p></p></td>
+<td><p>3.1.0</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p></p></td>
+<td><p>3.2.0</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p>oneAPI</p></td>
+<td><p>2023.1</p></td>
+<td><p>testing</p></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Note</strong>:</p>
+<ol class="arabic simple">
+<li><p>GCC compilers provide the support for the AMD zen 2 architecture since version 9.0.0. The performance might be boosted using the flag <code class="docutils literal notranslate"><span class="pre">-march=znver2</span></code>, however, since the login node use the same type of CPU, it is reasonable to compile code there with the flag <code class="docutils literal notranslate"><span class="pre">-march=native</span></code>.</p></li>
+<li><p>AOCC may bring extra performance compared to GCC compilers, however, it may not be supported by some softwares/applications.</p></li>
+<li><p>We are still testing the compatibility and performance of the oneAPI compiler.</p></li>
+</ol>
+</section>
+<section id="parallel-computing-libraries">
+<h3>6.3 Parallel Computing Libraries<a class="headerlink" href="#parallel-computing-libraries" title="Permalink to this heading"></a></h3>
+<p>A consice list of essential libraries for scientific computing on HPC resources are available in the <strong>ORC-CSG</strong> system.</p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Library</p></th>
+<th class="head"><p>Version</p></th>
+<th class="head"><p>Compiler</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>AOCL</p></td>
+<td><p>3.0</p></td>
+<td><p>AOCC-3.0.0, GCC-10.2.0</p></td>
+</tr>
+<tr class="row-odd"><td><p></p></td>
+<td><p>3.2</p></td>
+<td><p>AOCC-3.2.0, GCC-11.2.0</p></td>
+</tr>
+<tr class="row-even"><td><p>BLAS</p></td>
+<td><p>3.10.0</p></td>
+<td><p>GCC-10.2.0,11.2.0,12.2.0</p></td>
+</tr>
+<tr class="row-odd"><td><p>FFTW</p></td>
+<td><p>3.3.10</p></td>
+<td><p>GCC-10.2.0,11.2.0,12.2.0</p></td>
+</tr>
+<tr class="row-even"><td><p>GA</p></td>
+<td><p>5.8.1</p></td>
+<td><p>GCC-10.2.0</p></td>
+</tr>
+<tr class="row-odd"><td><p>LAPACK</p></td>
+<td><p>3.10.0</p></td>
+<td><p>GCC-10.2.0,11.2.0,12.2.0</p></td>
+</tr>
+<tr class="row-even"><td><p>LibXC</p></td>
+<td><p>5.1.4</p></td>
+<td><p>GCC-10.2.0</p></td>
+</tr>
+<tr class="row-odd"><td><p>LibXSMM</p></td>
+<td><p>1.16.1</p></td>
+<td><p>GCC-10.2.0</p></td>
+</tr>
+<tr class="row-even"><td><p>Netlib</p></td>
+<td><p></p></td>
+<td><p>GCC-10.2.0,11.2.0,12.2.0</p></td>
+</tr>
+<tr class="row-odd"><td><p>OpenMPI</p></td>
+<td><p>4.0.5</p></td>
+<td><p>GCC-10.2.0,11.2.0,12.2.0</p></td>
+</tr>
+<tr class="row-even"><td><p></p></td>
+<td><p>4.1.4</p></td>
+<td><p>GCC-10.2.0,11.2.0,12.2.0</p></td>
+</tr>
+<tr class="row-odd"><td><p>ScaLAPACK</p></td>
+<td><p>2.2.0</p></td>
+<td><p>GCC-10.2.0,11.2.0,12.2.0</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="softwares">
+<h3>6.4 Softwares<a class="headerlink" href="#softwares" title="Permalink to this heading"></a></h3>
+<p>Most of the softwares available in the <strong>ORC-CSG</strong> system are built for the theoretical/computational projects in the <a class="reference external" href="https://www.ornl.gov/group/chemical-separations">Chemical Separations Group</a>. These include but are not limited to:</p>
+<ul class="simple">
+<li><ol class="arabic simple">
+<li><p>Quantum chemistry calculations of molecular properties (Gaussian, Molpro, ORCA, CP2K, OpenMolcas)</p></li>
+</ol>
+</li>
+<li><ol class="arabic simple" start="2">
+<li><p>Excited state quantum chemistry calculations (Gaussian, Molpro, ORCA, CP2K, OpenMolcas)</p></li>
+</ol>
+</li>
+<li><ol class="arabic simple" start="3">
+<li><p>Molecular dynamics simulations (LAMMPS, GROMACS, CP2K)</p></li>
+</ol>
+</li>
+<li><ol class="arabic simple" start="4">
+<li><p>Advanced molecular dynamics simulations for free energy calculations (LAMMPS, GROMACS, CP2K)</p></li>
+</ol>
+</li>
+<li><ol class="arabic simple" start="5">
+<li><p>Advanced molecular dynamics simulations using quantum mechanics (Gaussian, CP2K)</p></li>
+</ol>
+</li>
+<li><ol class="arabic simple" start="6">
+<li><p>Solid state material calculations (CP2K)</p></li>
+</ol>
+</li>
+</ul>
+<p>Details of available software can be found in the table below:</p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Software</p></th>
+<th class="head"><p>Version</p></th>
+<th class="head"><p>Compiler</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>CP2K</p></td>
+<td><p>8.2</p></td>
+<td><p>GCC-10.2.0</p></td>
+</tr>
+<tr class="row-odd"><td><p></p></td>
+<td><p>2022.2</p></td>
+<td><p>GCC-10.2.0</p></td>
+</tr>
+<tr class="row-even"><td><p>CP2K-plumed</p></td>
+<td><p>8.2.</p></td>
+<td><p>GCC-10.2.0</p></td>
+</tr>
+<tr class="row-odd"><td><p></p></td>
+<td><p>2022.2</p></td>
+<td><p>GCC-10.2.0</p></td>
+</tr>
+<tr class="row-even"><td><p>Gaussian</p></td>
+<td><p>g16-rev-C.02</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p>GROMACS</p></td>
+<td><p>2022.3</p></td>
+<td><p>GCC-10.2.0</p></td>
+</tr>
+<tr class="row-even"><td><p>LAMMPS</p></td>
+<td><p>23Jun2022_up1</p></td>
+<td><p>GCC-10.2.0</p></td>
+</tr>
+<tr class="row-odd"><td><p>Molpro</p></td>
+<td><p>2012.1.57</p></td>
+<td><p>GCC-10.2.0</p></td>
+</tr>
+<tr class="row-even"><td><p>OpenMM</p></td>
+<td><p>8.0</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p>OpenMolcas</p></td>
+<td><p>22.10</p></td>
+<td><p>GCC-10.2.0</p></td>
+</tr>
+<tr class="row-even"><td><p>ORCA</p></td>
+<td><p>5.0.3</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p>Plumed</p></td>
+<td><p>2.6.2</p></td>
+<td><p>GCC-10.2.0</p></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Note</strong>: All softwares available in the module lists can be directly used upon the module is loaded.</p>
+</section>
+</section>
+<section id="slurm-job-scheduler">
+<h2>7. Slurm Job Scheduler<a class="headerlink" href="#slurm-job-scheduler" title="Permalink to this heading"></a></h2>
+<p><img alt="" src="_images/orc-csg-scheduler.png" /></p>
+<section id="slurm">
+<h3>7.1 Slurm<a class="headerlink" href="#slurm" title="Permalink to this heading"></a></h3>
+<p>The Slurm Workload Manager is the job queuing system or workload management system for <strong>ORC-CSG</strong>. Users can check the current node status by</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>    % sinfo
+</pre></div>
+</div>
+<p>and check the current queue status by</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>    % squeue
+</pre></div>
+</div>
+<p>To submit a batch job, use the following command:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>    % sbatch [option] &lt;submission-script&gt;
+</pre></div>
+</div>
+</section>
+<section id="quality-of-service-qos">
+<h3>7.2 Quality of Service (QoS)<a class="headerlink" href="#quality-of-service-qos" title="Permalink to this heading"></a></h3>
+<p>Quality of Service (QOS) is mainly used to apply different user privileges in the Slurm job scheduler.
+There are currently 4 categories of QOS, which are <code class="docutils literal notranslate"><span class="pre">csg_leader</span></code> (the group lead of the Chemical Separation Group), <code class="docutils literal notranslate"><span class="pre">csg_member</span></code> (CSG group members), <code class="docutils literal notranslate"><span class="pre">external</span></code> (members outside the CSG), and <code class="docutils literal notranslate"><span class="pre">staff</span></code> (the <strong>ORC-CSG</strong> administrators).
+The <code class="docutils literal notranslate"><span class="pre">csg_members</span></code> QOS currently has unlimited access to the nodes and unlimited number of jobs submitted to the Slurm job scheduler, whereas the <code class="docutils literal notranslate"><span class="pre">external</span></code> QOS will have limited access to a certain number of nodes and a maximum number of cores in the <strong>ORC-CSG</strong> system. The <code class="docutils literal notranslate"><span class="pre">staff</span></code> QOS will have prioritized access to temporary nodes for node setup and performance testing, before delivering the nodes to the users.</p>
+<ul class="simple">
+<li><p>Note: <strong>There exists a super user.</strong> The <code class="docutils literal notranslate"><span class="pre">csg_leader</span></code> QOS has a superior access level to all resources.</p></li>
+</ul>
+</section>
+<section id="queue-and-queueing-policy">
+<h3>7.3 Queue and Queueing Policy<a class="headerlink" href="#queue-and-queueing-policy" title="Permalink to this heading"></a></h3>
+<p>Two queues are used in the <strong>ORC-CSG</strong> system.</p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Priority</p></th>
+<th class="head"><p>Queue Name</p></th>
+<th class="head"><p>Max Wall Clock Time</p></th>
+<th class="head"><p>Max Cores Per Job</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>High</p></td>
+<td><p>Standard</p></td>
+<td><p>14 Days</p></td>
+<td><p>376</p></td>
+<td><p>Standard queue</p></td>
+</tr>
+<tr class="row-odd"><td><p>Low</p></td>
+<td><p>Background</p></td>
+<td><p>14 Days</p></td>
+<td><p>376</p></td>
+<td><p>Killable queue</p></td>
+</tr>
+</tbody>
+</table>
+<p>At the current stage, since the system is not yet exposed to external users, the jobs are prioritized on a “first-come-first-serve” policy.</p>
+</section>
+<section id="batch-scripts">
+<h3>7.4 Batch scripts<a class="headerlink" href="#batch-scripts" title="Permalink to this heading"></a></h3>
+<p>Here are a few examples of job submission scripts that uses the HPC softwares and applications in the <strong>ORC-CSG</strong> system.</p>
+<section id="example-1-gaussian-16-with-30-cores">
+<h4>7.4.1 Example 1: Gaussian 16 (with 30 cores)<a class="headerlink" href="#example-1-gaussian-16-with-30-cores" title="Permalink to this heading"></a></h4>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="ch">#!/bin/bash</span>
+<span class="c1">#SBATCH -p standard</span>
+<span class="c1">#SBATCH --nodes=1</span>
+<span class="c1">#SBATCH --ntasks-per-node=30</span>
+<span class="c1">#SBATCH -c 1</span>
+<span class="c1">#SBATCH -J test-gaussian</span>
+<span class="c1">#SBATCH -t 1:00:00</span>
+<span class="c1">#SBATCH --mem=0</span>
+<span class="c1">#SBATCH -o ./slurm-%j.out-%N</span>
+<span class="c1">#SBATCH -e ./slurm-%j.err-%N</span>
+
+module<span class="w"> </span>load<span class="w"> </span>gaussian
+
+<span class="c1"># Scratch directory already set by module:</span>
+<span class="c1">#TMPDIR=/cephfs/scratch/${USER}/gauss_scrdir</span>
+
+<span class="nv">inputfile</span><span class="o">=</span><span class="s2">&quot;xxx.inp&quot;</span>
+<span class="nv">outputfile</span><span class="o">=</span><span class="si">${</span><span class="nv">inputfile</span><span class="p">%.inp</span><span class="si">}</span>.out
+
+<span class="nb">export</span><span class="w"> </span><span class="nv">WORK_DIR</span><span class="o">=</span><span class="si">${</span><span class="nv">PWD</span><span class="si">}</span>
+
+<span class="c1"># Run g16</span>
+g16<span class="w"> </span><span class="si">${</span><span class="nv">inputfile</span><span class="si">}</span><span class="w"> </span>&gt;<span class="w"> </span><span class="si">${</span><span class="nv">outputfile</span><span class="si">}</span>
+</pre></div>
+</div>
+</section>
+<section id="example-2-gaussian-16-with-constrained-memory-size">
+<h4>7.4.2 Example 2: Gaussian 16 with constrained memory size<a class="headerlink" href="#example-2-gaussian-16-with-constrained-memory-size" title="Permalink to this heading"></a></h4>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="ch">#!/bin/bash</span>
+<span class="c1">#SBATCH -p standard</span>
+<span class="c1">#SBATCH --nodes=1</span>
+<span class="c1">#SBATCH --ntasks-per-node=64</span>
+<span class="c1">#SBATCH -c 1</span>
+<span class="c1">#SBATCH -J test-gaussian</span>
+<span class="c1">#SBATCH -t 1:00:00</span>
+<span class="c1">#SBATCH --mem=200G</span>
+<span class="c1">#SBATCH --nodelist=orc-csg-amd-&lt;x&gt;</span>
+<span class="c1">#SBATCH -o ./slurm-%j.out-%N</span>
+<span class="c1">#SBATCH -e ./slurm-%j.err-%N</span>
+
+module<span class="w"> </span>load<span class="w"> </span>gaussian
+
+<span class="c1"># Scratch directory already set by module:</span>
+<span class="c1">#TMPDIR=/cephfs/scratch/${USER}/gauss_scrdir</span>
+
+<span class="nv">inputfile</span><span class="o">=</span><span class="s2">&quot;xxx.inp&quot;</span>
+<span class="nv">outputfile</span><span class="o">=</span><span class="si">${</span><span class="nv">inputfile</span><span class="p">%.inp</span><span class="si">}</span>.out
+
+<span class="nb">export</span><span class="w"> </span><span class="nv">WORK_DIR</span><span class="o">=</span><span class="si">${</span><span class="nv">PWD</span><span class="si">}</span>
+
+<span class="c1"># Run g16</span>
+g16<span class="w"> </span><span class="si">${</span><span class="nv">inputfile</span><span class="si">}</span><span class="w"> </span>&gt;<span class="w"> </span><span class="si">${</span><span class="nv">outputfile</span><span class="si">}</span>
+</pre></div>
+</div>
+</section>
+<section id="example-3-molpro-2021-1">
+<h4>7.4.3 Example 3: Molpro 2021.1<a class="headerlink" href="#example-3-molpro-2021-1" title="Permalink to this heading"></a></h4>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="ch">#!/bin/bash</span>
+<span class="c1">#SBATCH -p standard</span>
+<span class="c1">#SBATCH --nodes=1</span>
+<span class="c1">#SBATCH --ntasks-per-node=30</span>
+<span class="c1">#SBATCH --cpus-per-task=1</span>
+<span class="c1">#SBATCH -J test-molpro</span>
+<span class="c1">#SBATCH -t 1:00:00</span>
+<span class="c1">#SBATCH --mem=0</span>
+<span class="c1">#SBATCH -o ./slurm-%j.out-%N</span>
+<span class="c1">#SBATCH -e ./slurm-%j.err-%N</span>
+
+module<span class="w"> </span>load<span class="w"> </span>molpro
+
+<span class="nb">export</span><span class="w"> </span><span class="nv">WORK_DIR</span><span class="o">=</span><span class="si">${</span><span class="nv">PWD</span><span class="si">}</span>
+<span class="nb">export</span><span class="w"> </span><span class="nv">OMP_NUM_THREADS</span><span class="o">=</span><span class="si">${</span><span class="nv">SLURM_CPUS_PER_TASK</span><span class="si">}</span>
+
+<span class="c1"># Scratch directory already set by module:</span>
+<span class="c1">#TMPDIR=/cephfs/scratch/${USER}/molpro_scratch</span>
+
+<span class="nv">filename</span><span class="o">=</span><span class="s2">&quot;xxxxx.com&quot;</span>
+<span class="c1"># Run molpro</span>
+molpro<span class="w"> </span>-W<span class="w"> </span>scratch<span class="w"> </span>-n<span class="w"> </span><span class="si">${</span><span class="nv">SLURM_TASKS_PER_NODE</span><span class="si">}</span><span class="w"> </span>-t<span class="w"> </span><span class="si">${</span><span class="nv">SLURM_CPUS_PER_TASK</span><span class="si">}</span><span class="w"> </span>-d<span class="w"> </span><span class="si">${</span><span class="nv">TMPDIR</span><span class="si">}</span><span class="w"> </span>--no-xml-output<span class="w"> </span><span class="si">${</span><span class="nv">filename</span><span class="si">}</span>
+</pre></div>
+</div>
+</section>
+<section id="example-4-orca-5-0-3">
+<h4>7.4.4 Example 4: ORCA 5.0.3<a class="headerlink" href="#example-4-orca-5-0-3" title="Permalink to this heading"></a></h4>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="ch">#!/bin/bash</span>
+<span class="c1">#SBATCH -p test</span>
+<span class="c1">#SBATCH --nodes=1</span>
+<span class="c1">#SBATCH --ntasks-per-node=30</span>
+<span class="c1">#SBATCH -c 1</span>
+<span class="c1">#SBATCH -J test-orca</span>
+<span class="c1">#SBATCH -t 2:00:00</span>
+<span class="c1">#SBATCH --mem=0</span>
+<span class="c1">#SBATCH -o ./slurm-%j.out-%N</span>
+<span class="c1">#SBATCH -e ./slurm-%j.err-%N</span>
+
+
+module<span class="w"> </span>load<span class="w"> </span>orca
+
+<span class="nv">inputfile</span><span class="o">=</span><span class="s2">&quot;xxxx.inp&quot;</span>
+<span class="nv">xyzfile</span><span class="o">=</span><span class="s2">&quot;xxxxxx.xyz&quot;</span>
+<span class="nv">wfnfile</span><span class="o">=</span><span class="si">${</span><span class="nv">inputfile</span><span class="p">%.inp</span><span class="si">}</span>.gbw
+<span class="nv">outputfile</span><span class="o">=</span><span class="si">${</span><span class="nv">inputfile</span><span class="p">%.inp</span><span class="si">}</span>.out
+
+<span class="c1"># Scratch directory already set by module:</span>
+<span class="c1">#TMPDIR=/cephfs/scratch/${USER}/orca_scratch</span>
+
+<span class="nb">export</span><span class="w"> </span><span class="nv">WORK_DIR</span><span class="o">=</span><span class="si">${</span><span class="nv">PWD</span><span class="si">}</span>
+
+<span class="nv">ORCA_JOB_ID</span><span class="o">=</span><span class="s2">&quot;orca_</span><span class="k">$(</span>date<span class="w"> </span>+%F-%H%M%S<span class="k">)</span><span class="s2">&quot;</span>
+<span class="k">if</span><span class="w"> </span><span class="o">[</span><span class="w"> </span><span class="s2">&quot;x</span><span class="si">${</span><span class="nv">TMPDIR</span><span class="si">}</span><span class="s2">&quot;</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s2">&quot;x&quot;</span><span class="w"> </span><span class="o">]</span><span class="p">;</span><span class="w"> </span><span class="k">then</span><span class="w"> </span><span class="nv">TMPDIR</span><span class="o">=</span><span class="si">${</span><span class="nv">PWD</span><span class="si">}</span><span class="p">;</span><span class="w"> </span><span class="k">fi</span>
+mkdir<span class="w"> </span>-p<span class="w"> </span><span class="si">${</span><span class="nv">TMPDIR</span><span class="si">}</span>/<span class="si">${</span><span class="nv">ORCA_JOB_ID</span><span class="si">}</span>
+cp<span class="w"> </span><span class="si">${</span><span class="nv">inputfile</span><span class="si">}</span><span class="w"> </span><span class="si">${</span><span class="nv">TMPDIR</span><span class="si">}</span>/<span class="si">${</span><span class="nv">ORCA_JOB_ID</span><span class="si">}</span>
+cp<span class="w"> </span><span class="si">${</span><span class="nv">xyzfile</span><span class="si">}</span><span class="w">   </span><span class="si">${</span><span class="nv">TMPDIR</span><span class="si">}</span>/<span class="si">${</span><span class="nv">ORCA_JOB_ID</span><span class="si">}</span>
+cp<span class="w"> </span><span class="si">${</span><span class="nv">wfnfile</span><span class="si">}</span><span class="w">   </span><span class="si">${</span><span class="nv">TMPDIR</span><span class="si">}</span>/<span class="si">${</span><span class="nv">ORCA_JOB_ID</span><span class="si">}</span>
+<span class="nb">cd</span><span class="w"> </span><span class="si">${</span><span class="nv">TMPDIR</span><span class="si">}</span>/<span class="si">${</span><span class="nv">ORCA_JOB_ID</span><span class="si">}</span>
+
+<span class="c1"># Run ORCA 5</span>
+<span class="k">$(</span>which<span class="w"> </span>orca<span class="k">)</span><span class="w"> </span><span class="si">${</span><span class="nv">inputfile</span><span class="si">}</span><span class="w"> </span>&gt;<span class="w"> </span><span class="si">${</span><span class="nv">outputfile</span><span class="si">}</span>
+
+<span class="c1"># End of execution</span>
+<span class="nb">cd</span><span class="w"> </span><span class="si">${</span><span class="nv">WORK_DIR</span><span class="si">}</span>
+cp<span class="w"> </span><span class="si">${</span><span class="nv">TMPDIR</span><span class="si">}</span>/<span class="si">${</span><span class="nv">ORCA_JOB_ID</span><span class="si">}</span>/*<span class="w"> </span>.
+rm<span class="w"> </span>-r<span class="w"> </span><span class="si">${</span><span class="nv">TMPDIR</span><span class="si">}</span>/<span class="si">${</span><span class="nv">ORCA_JOB_ID</span><span class="si">}</span>
+</pre></div>
+</div>
+</section>
+<section id="example-cp2k-8-2-0">
+<h4>7.4.5 Example: CP2K 8.2.0<a class="headerlink" href="#example-cp2k-8-2-0" title="Permalink to this heading"></a></h4>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>#!/bin/bash
+#SBATCH -p standard
+#SBATCH --nodes=1
+#SBATCH --ntasks-per-node=30
+#SBATCH --cpus-per-task=2
+#SBATCH -J test-cp2k
+#SBATCH -t 1:00:00
+#SBATCH --mem=0
+#SBATCH -o ./slurm-%j.out-%N
+#SBATCH -e ./slurm-%j.err-%N
+
+module load cp2k
+
+inputfile=&quot;xxx.inp&quot;
+outputfile=${inputfile%.inp}.out
+
+export WORK_DIR=${PWD}
+
+# Run CP2K
+export OMP_NUM_THREADS=${SLURM_CPUS_PER_TASK}
+mpirun cp2k.psmp -i ${inputfile} &gt; ${outputfile}
+</pre></div>
+</div>
+<p><img alt="ORC-CSG" src="_images/orc-csg-banner-2.png" /></p>
+</section>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="resources.html" class="btn btn-neutral float-left" title="ORC-CSG Resources" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="software.html" class="btn btn-neutral float-right" title="Softwares" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023, Xinyou Ma.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

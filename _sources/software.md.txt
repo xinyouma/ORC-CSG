@@ -1,0 +1,70 @@
+# Softwares
+
+## Python 3 Environments
+
+**ORC-CSG** provides 4 different sets of python 3 environments for users. Users may choose different python development environment dependent on their workflow.
+
+* 1) **native python** (3.9.15, 3.11.0, 3.12.0) 
+
+	In the native python environments, a list of essential scientific analysis and machine learning packages are provided.  
+
+* 2) **anaconda 3** (2022.10)
+
+	Anaconda 3 provides a standard size of packages that are ready to use for uses to perform data analysis and/or python code developments. 
+
+* 3) **miniconda 3** (23.1.0)
+
+	Miniconda 3 contains the smallest size of pre-installed packages. Users can easily build their own environments using Miniconda.
+	
+* 4) **mamba** (1.3.1)
+	
+	Mamba has the advantages to the package dependency faster than conda. Therefore, several software packages, such as openmm and deepmd-kit, are installed using the mamba version.
+
+
+
+| Packages     | Anaconda 3 (2022.10) | Native Python (3.11.0/3.12.0) | Mamba (1.3.1) | Miniconda 3 (23.1.0)|
+|--------------|----------------------|-------------------------------|---------------|-------------|
+| ipython      | Y                    | Y                             | Y             | N           |
+| numpy        | Y                    | Y                             | Y             | N           |
+| pandas       | Y                    | Y                             | Y             | N           |
+| matplotlib   | Y                    | Y                             | Y             | N           |
+| dask         | Y                    | Y                             | N             | N           |
+| jupyter      | Y                    | Y                             | Y             | N           |
+| scikit-learn | Y                    | Y                             | Y             | N           |
+| pytorch      | N                    | Y                             | N             | N           |
+| scipy        | Y                    | Y                             | N             | N           |
+| tensorflow   | N                    | Y                             | N             | N           |
+| jupyterlab   | Y                    | N                             | Y             | N           |
+| numba        | Y                    | N                             | N             | N           |
+| spyder       | Y                    | N                             | N             | N           |
+
+
+
+
+## Chemistry Softwares
+Most of the softwares available in the **ORC-CSG** system are built for the theoretical/computational projects in the [Chemical Separations Group](https://www.ornl.gov/group/chemical-separations). **In the ORC-CSG system, the performance of these chemistry softwares are fully optimized to achieve their best performances.** These include but are not limited to:
+
+* 1) **Quantum chemistry calculations of molecular properties**  (Gaussian, Molpro, ORCA, CP2K, OpenMolcas)
+* 2) **Excited state quantum chemistry calculations** (Gaussian, Molpro, ORCA, CP2K, OpenMolcas)
+* 3) **Molecular dynamics simulations** (LAMMPS, GROMACS, CP2K)
+* 4) **Advanced molecular dynamics simulations for free energy calculations** (LAMMPS, GROMACS, CP2K)
+* 5) **Advanced molecular dynamics simulations using quantum mechanics** (Gaussian, CP2K)
+* 6) **Solid state material calculations** (CP2K)
+
+Details of available software can be found in the table below:
+
+| Software    | Version       | Compiler   | |
+|-------------|---------------|------------|----|
+| CP2K        | 8.2           | GCC-10.2.0 | ![CP2K](https://www.cp2k.org/_media/wiki:logo.png)|
+|             | 2022.2        | GCC-10.2.0 | ![CP2K](https://www.cp2k.org/_media/wiki:logo.png)|
+| Gaussian    | g16-rev-C.02  |            | ![Gaussian](https://gaussian.com/wp-content/uploads/2016/07/logo_image14.bmp)| 
+| GROMACS     | 2022.3        | GCC-10.2.0 | ![Gromacs](https://www.gromacs.org/_static/gmx_logo_blue.png)|
+| LAMMPS      | 23Jun2022_up1 | GCC-10.2.0 | ![Lammps](https://www.lammps.org/movies/logo.gif)|
+| Molpro      | 2012.1.57     | GCC-10.2.0 | ![Molpro](https://www.molpro.net/resources/logo/molpro_logo_aa_75.gif)|
+| OpenMM      | 8.0           |            | ![OpenMM](https://simtk.org/logos/openmm?dummy_value=973060835)|
+| OpenMolcas  | 22.10         | GCC-10.2.0 | ![OpenMolcas](https://gitlab.com/uploads/-/system/project/avatar/3536517/logo_open_flat.png?width=64)|
+| ORCA        | 5.0.3         |            | ![ORCA](https://www.orcasoftware.de/tutorials_orca/_images/ORCA_logo.png)|
+| Plumed      | 2.6.2         | GCC-10.2.0 | ![Plumed](https://www.plumed.org//pigeon.png)|
+| VMD         | 1.9.4a55      |            | |
+
+![ORC-CSG](images/orc-csg-banner-2.png)

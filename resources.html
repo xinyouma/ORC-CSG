@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ORC-CSG Resources &mdash; ORC-CSG Documentation 0.1 documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+    <link rel="shortcut icon" href="_static/favicon.ico"/>
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="_static/jquery.js"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/sphinx_highlight.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="User Guide" href="full_user_guide.html" />
+    <link rel="prev" title="HPC in the Cloud" href="hpc_in_the_cloud.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            ORC-CSG Documentation
+              <img src="_static/orc-csg-logo-2.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="new_user.html">New User Quickstart</a></li>
+<li class="toctree-l1"><a class="reference internal" href="hpc_in_the_cloud.html">HPC in the Cloud</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">ORC-CSG Resources</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#computational-resources">Computational Resources</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#dedicated-nodes">Dedicated nodes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#expandable-nodes">Expandable nodes</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#data-storage-resources">Data Storage Resources</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="full_user_guide.html">User Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="software.html">Softwares</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">ORC-CSG Documentation</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">ORC-CSG Resources</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/resources.md.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="orc-csg-resources">
+<h1>ORC-CSG Resources<a class="headerlink" href="#orc-csg-resources" title="Permalink to this heading"></a></h1>
+<p><img alt="system_design" src="_images/orc-csg-system-design.png" /></p>
+<section id="computational-resources">
+<h2>Computational Resources<a class="headerlink" href="#computational-resources" title="Permalink to this heading"></a></h2>
+<section id="dedicated-nodes">
+<h3>Dedicated nodes<a class="headerlink" href="#dedicated-nodes" title="Permalink to this heading"></a></h3>
+<p><strong>ORC-CSG</strong> currently has three dedicted nodes that are perpetually running to provide computational resources for users. These three compute nodes use AMD EPYC 7702 CPUs, and user can use 120 cores with NUMA optimization or 128 cores without NUMA optimization.</p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Node Name</p></th>
+<th class="head"><p># cores</p></th>
+<th class="head"><p>NUMA optimized?</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>orc-csg-amd-8</p></td>
+<td><p>120</p></td>
+<td><p>Y</p></td>
+</tr>
+<tr class="row-odd"><td><p>orc-csg-amd-[9-10]</p></td>
+<td><p>128</p></td>
+<td><p>N</p></td>
+</tr>
+</tbody>
+</table>
+<p>On different applications, depending on the parallelization method (OpenMP, MPI, and etc.), users may experience slightly different performances with or without NUMA optimization.</p>
+</section>
+<section id="expandable-nodes">
+<h3>Expandable nodes<a class="headerlink" href="#expandable-nodes" title="Permalink to this heading"></a></h3>
+<p>From time to time, users may request extra computational resources which are not available yet in the current <strong>ORC-CSG</strong> system. The request for temporary nodes is often possible, but not gauranteed, which totally depend on the availability in ORC.</p>
+<ul class="simple">
+<li><p>Note: in <strong>ORC-CSG</strong>, a short list of softwares are already compiled  for the Intel-Nvidia GPU nodes which are available in ORC.</p></li>
+</ul>
+</section>
+</section>
+<section id="data-storage-resources">
+<h2>Data Storage Resources<a class="headerlink" href="#data-storage-resources" title="Permalink to this heading"></a></h2>
+<p>Three file systems are implemented in <strong>ORC-CSG</strong>:</p>
+<ul class="simple">
+<li><ol class="arabic simple">
+<li><p>an NFS partition of 950 GB mounted in the <code class="docutils literal notranslate"><span class="pre">/home</span></code> directory</p></li>
+</ol>
+</li>
+<li><ol class="arabic simple" start="2">
+<li><p>an NFS partition of 950 GB mounted in the <code class="docutils literal notranslate"><span class="pre">/nfs/work</span></code> directory</p></li>
+</ol>
+</li>
+<li><ol class="arabic simple" start="3">
+<li><p>an CephFS partition of 4.0 TB mounted in the <code class="docutils literal notranslate"><span class="pre">/cephfs/scratch</span></code> directory</p></li>
+</ol>
+</li>
+</ul>
+<p>For each user, these file space can be accessed using the environment variables <code class="docutils literal notranslate"><span class="pre">$HOME</span></code>, <code class="docutils literal notranslate"><span class="pre">$WORKDIR</span></code>, and <code class="docutils literal notranslate"><span class="pre">$SCRATCH</span></code>.</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">/home</span></code> and the <code class="docutils literal notranslate"><span class="pre">/nfs/work</span></code> directories using the NFS, are considered to be more stable than the CephFS. The only difference between users’ <code class="docutils literal notranslate"><span class="pre">$HOME</span></code> and <code class="docutils literal notranslate"><span class="pre">$WORKDIR</span></code> directories is that <code class="docutils literal notranslate"><span class="pre">$WORKDIR</span></code> can be accessed by other users by default. The CephFS is designated to I/O intensitive (frequently read and write data) jobs, especially for computations which need to offload the temporary data storage from memories to hard drive.</p>
+<p>When user log in to the <strong>ORC-CSG</strong> system, the usage status of the three file systems are shown as follows:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>	 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+	 Mounted on       Size Avail Use%
+	 /home            950G  639G  33%
+	 /nfs/work        950G  715G  25%
+	 /cephfs/scratch  4.0T  3.1T  22%
+	 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+</pre></div>
+</div>
+<p><img alt="ORC-CSG" src="_images/orc-csg-banner-2.png" /></p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="hpc_in_the_cloud.html" class="btn btn-neutral float-left" title="HPC in the Cloud" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="full_user_guide.html" class="btn btn-neutral float-right" title="User Guide" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023, Xinyou Ma.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
